@@ -3,7 +3,9 @@ package POO.Parqueadero_en_java;
 import java.time.LocalTime;
 
 public class Parking {
-    LocalTime horario;
+    String id;
+    double area;
     Cubiculo cubiculo;
-    Planilla planilla;
+    String direccion;
+    String estado;
 }
