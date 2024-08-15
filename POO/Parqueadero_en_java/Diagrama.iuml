@@ -1,0 +1,87 @@
+@startuml
+class Cubiculo {
+    int id;
+    int numero;
+    double ancho;
+    double largo;
+    String estado;
+    String tipo;
+    String zona;
+}
+class Horario {
+    int id;
+    Date dia;
+    LocalDate horaInicio;
+    LocalDate horaFin;
+}
+class Parking {
+    int id;
+    String nombre;
+    double area;
+    int cubiculos;
+    String direccion;
+    String estado;
+}
+class Tarifa {
+    int id;
+    float valor;
+    String tipo;
+    float unidad;
+}
+class Turno {
+    int id;
+    Horario horario;
+    Vigilante vigilante;
+    Parking parqueadero;
+    String cargo;
+    
+}
+class Usuario {
+    String identificación;
+    String tipo_id;
+    String nombre;
+    String apellido;
+    String telefono;
+    String email;
+    String rol;
+    String foto;
+    boolean reserva;
+}
+class Vehiculo {
+    String placa;
+    String marca;
+    String color;
+    String modelo;
+    String descripcion;
+}
+class Vigilante {
+    String identificación;
+    String tipo;
+    String nombre;
+    String apellido1;
+    String apellido2;
+    String email;
+    String telefono;
+    String foto;
+}
+class Servicio {
+    int id;
+    LocalDate fechaEntrada;
+    LocalDate fechaSalida;
+    Usuario conductor;
+    Vehiculo vehiculo;
+    Vigilante guardiaEntrada;
+    Vigilante guardiaPatio;
+    Cubiculo cubiculo;
+    Parking parqueadero;
+    Tarifa tarifa;
+}
+Vehiculo -- "*" Servicio
+Usuario -- "*" Servicio
+Cubiculo -- "*" Parking
+Cubiculo -- "*" Servicio
+Tarifa-- "*" Servicio
+Vigilante -- "*" Turno
+Horario -- "*" Turno
+Parking -- "*" Turno
+@enduml
