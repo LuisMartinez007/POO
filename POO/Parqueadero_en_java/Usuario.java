@@ -1,12 +1,13 @@
 package POO.Parqueadero_en_java;
 
-public class Vigilante {
+public class Usuario {
     String identificación;
-    String tipo;
+    String tipo_id;
     String nombre;
-    String apellido1;
-    String apellido2;
-    String email;
+    String apellido;
     String telefono;
+    String email;
+    String rol;
     String foto;
+    boolean reserva;
 }

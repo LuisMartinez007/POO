@@ -1,11 +1,11 @@
 package POO.Parqueadero_en_java;
 
-import java.time.LocalTime;
 
 public class Parking {
-    String id;
+    int id;
+    String nombre;
     double area;
-    Cubiculo cubiculo;
+    int cubiculos;
     String direccion;
     String estado;
 }
