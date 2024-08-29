@@ -1,0 +1,44 @@
+@startuml Examenes
+class Alumno {
+    String num_matricula;
+    String identificacion;
+    String tipo_id;
+    String nombre;
+    String apellido1;
+    String apellido2;
+    String correo;
+    String telefono;
+}
+class ControlEscrito{
+    int id;
+    int numero_preguntas;
+    LocalDate fecha;
+    double[] notas;
+}
+class DiseñoPractica {
+    Profesor[] autores;
+    Practica practica;
+    LocalDate fecha;
+}
+class Practica {
+    int id;
+    String titulo;
+    String dificultad;
+    LocalDate fecha;
+    double[] notas;
+}
+class Profesor {
+    String identificacion;
+    String tipo_id;
+    String nombre;
+    String apellido1;
+    String apellido2;
+    String correo;
+    String telefono;
+}
+class Resultado {
+    Alumno alumno;
+    ControlEscrito control_escrito;
+    Practica practica;
+}
+@enduml
