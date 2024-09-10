@@ -6,17 +6,15 @@ class Alumno {
     String nombre;
     String apellido1;
     String apellido2;
-    String correo;
-    String telefono;
+    String grupo;
 }
 class ControlEscrito{
     int id;
     int numero_preguntas;
     LocalDate fecha;
-    double[] notas;
 }
 class DiseñoPractica {
-    Profesor[] autores;
+    List<Profesor> autor;
     Practica practica;
     LocalDate fecha;
 }
@@ -25,7 +23,7 @@ class Practica {
     String titulo;
     String dificultad;
     LocalDate fecha;
-    double[] notas;
+    DiseñoPractica dieseñoPractica;
 }
 class Profesor {
     String identificacion;
@@ -36,9 +34,20 @@ class Profesor {
     String correo;
     String telefono;
 }
-class Resultado {
-    Alumno alumno;
-    ControlEscrito control_escrito;
-    Practica practica;
+class ResultadoControlEscrito {
+    private Alumno alumno;
+    private ControlEscrito controlEscrito;
+    private double nota;
 }
+class ResultadoPractica {
+    private Alumno alumno;
+    private Practica practica;
+    private double nota;
+}
+DiseñoPractica "1" -- "*" Profesor
+ResultadoControlEscrito "1" -- "*" Alumno
+ResultadoControlEscrito "*" -- "1" ControlEscrito
+Practica "1" -- "*" DiseñoPractica
+ResultadoPractica "1" -- "*" Alumno
+ResultadoPractica "*" -- "1" Practica
 @enduml

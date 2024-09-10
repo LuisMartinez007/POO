@@ -1,9 +1,17 @@
 package POO.Examenes_Ejercicio_16;
 
-import java.time.LocalDate;
+import java.sql.Date;
+import java.util.List;
 
 public class DiseñoPractica {
-    Profesor[] autores;
-    Practica practica;
-    LocalDate fecha;
+    private List<Profesor> autor;
+    private Practica practica;
+    private Date fecha;
+    
+    public Date getFecha() {
+        return fecha;
+    }
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    } 
 }
