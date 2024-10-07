@@ -1,0 +1,14 @@
+@startuml
+class Jugador{
+    -nombre: String;
+    +getNombre(String nombre): String;
+}
+class Equipo {
+    -jugadores: List<Jugador>;
+    +agregarJugador(Jugador jugador): void;
+    +buscarJugador(String nombre): Jugador;
+    +eliminarJugador(Jugador jugador): boolean;
+    +eliminarTodosLosJugadores():void;
+
+}
+Jugador <-- Equipo

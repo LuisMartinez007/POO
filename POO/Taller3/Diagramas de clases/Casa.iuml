@@ -1,0 +1,12 @@
+@startuml
+class Casa{
+    -puerta: Puerta;
+    +cambiarPuerta(Puerta nuevaPuerta): void;
+    +getPuerta() Puerta;
+    +eliminarPuerta() void;
+}
+class Puerta{
+    -material: String;
+    +getMaterial(String material): String;
+}
+Puerta <-- Casa

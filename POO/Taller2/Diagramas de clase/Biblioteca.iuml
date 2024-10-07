@@ -1,0 +1,10 @@
+class Biblioteca{
+    -libros : List<Libro>
+    +agregarlibros(Libro libro) : void;
+    +mostrarlibros() : void;
+}
+class Libro{
+    -nombre : String
+    +getNombre() : String
+}
+Biblioteca <-- Libro

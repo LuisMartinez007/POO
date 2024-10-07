@@ -1,0 +1,11 @@
+class Jugador{
+    -nombre : String;
+    -equipo : Equipo;
+    +setEquipo(Equipo equipo) : void;
+}
+class Equipo{
+    -nombre : String;
+    -jugador : Jugador;
+    +setJugador(Jugador jugador) : void;
+}
+Jugador <--> Equipo

@@ -1,0 +1,14 @@
+class Estudiante{
+    -nombre: String
+    -edad: int
+    +toString(): String
+}
+
+class Aula{
+    -nombreAula: String
+    -estudiantes: List<Estudiante>
+    +agregarEstudiante(Estudiante estudiante): void
+    +mostrarEstudiantes(): void
+}
+
+Estudiante <-- Aula

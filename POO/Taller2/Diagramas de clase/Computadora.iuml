@@ -1,0 +1,9 @@
+class Procesador {
+    +procesar() : void;
+}
+class Computadora {
+    -procesador : Procesador;
+    +creacion() : void;
+    +destruccion() : void;
+}
+Procesador <-- Computadora

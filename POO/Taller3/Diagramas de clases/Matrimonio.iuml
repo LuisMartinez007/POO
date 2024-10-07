@@ -1,0 +1,16 @@
+@startuml
+class Persona{
+    -String nombre;
+    +getNombre(): String;
+}
+class Evento{
+    -Date fecha;
+    +getFecha(): Date;
+}
+class Matrimonio{
+    -evento: Evento;
+    -persona: Persona;
+    +mostrarMatrimonio(): void;
+}
+Persona <-- Matrimonio
+Evento <-- Matrimonio

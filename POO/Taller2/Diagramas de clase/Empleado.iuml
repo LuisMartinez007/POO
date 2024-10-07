@@ -1,0 +1,15 @@
+class Empleado{
+    -nombre : String;
+    +getNombre() : String;
+}
+class Proyecto{
+    -nombre : String;
+    +getNombre() : String;
+}
+class Asignacion{
+    -empleado : Empleado;
+    -proyecto : Proyecto;
+    +mostrarAsignacion() : void;
+}
+Empleado <-- Asignacion
+Proyecto <-- Asignacion

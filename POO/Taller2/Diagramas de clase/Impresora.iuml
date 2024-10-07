@@ -1,0 +1,7 @@
+class Impresora{
+    +imprimir() : void;
+}
+class Documento{
+    +impresion() : void;
+}
+Impresora <-- Documento
